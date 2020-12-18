@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiskovne forme</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Roboto&display=swap');
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: lightyellow;
+            /***Pozadinska slika koja dodaje noise (grain) na boju kako bi se ostvarila tekstura papira - preuzeto s interneta */
+            background-image: url(data:image/png;base64,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);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .okvir2 {
+            position: absolute;
+            top: 20%;
+            width: 60%;
+            border: 2px solid black;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            padding: 3em;
+            box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.212);
+            background-color: white;
+        }
+        
+        .okvir2::after {
+            content: " Teo Domines Peter, Multimedijske komunikacije 1, Grafički fakultet, 2020.";
+            font-family: 'JetBrains Mono', monospace;
+            color: gray;
+            text-align: center;
+            font-size: 0.8em;
+            width: 100%;
+            padding-top: 2em;
+            display: block;
+            column-count: 1;
+        }
+        
+        #visoki,
+        #duboki,
+        #ofsetni {
+            border: 2px solid black;
+            font-size: 1em;
+            padding: 0.7em;
+            height: 2.7em;
+            display: inline-block;
+            box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.336);
+            transition: .3s;
+            margin-bottom: 1em;
+            margin-right: 0.3em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        #visoki:hover,
+        #duboki:hover,
+        #ofsetni:hover {
+            cursor: pointer;
+        }
+        
+        #visoki:active,
+        #duboki:active,
+        #ofsetni:active {
+            transform: translateX(3px) translateY(3px);
+            box-shadow: none;
+        }
+        /*********************************************/
+        
+        #visoki:active~#h_vis,
+        #visoki:active~.text_visoki {
+            display: block;
+            animation: animacija-tekst .5s ease-in-out;
+        }
+        
+        #visoki:active~#prazno_holder {
+            display: none;
+        }
+        /*****************************************/
+        
+        #duboki:active~#h_dub,
+        #duboki:active~.text_duboki {
+            display: block;
+            animation: animacija-tekst .5s ease-in-out;
+        }
+        
+        #duboki:active~#prazno_holder {
+            display: none;
+        }
+        /***************************************/
+        
+        #ofsetni:active~#h_ofs,
+        #ofsetni:active~.text_ofsetni {
+            display: block;
+            animation: animacija-tekst .5s ease-in-out;
+        }
+        
+        #ofsetni:active~#prazno_holder {
+            display: none;
+            animation: animacija-tekst .5s ease-in-out;
+        }
+        
+        #visoki:active~#sp1,
+        #visoki:active~#sp2,
+        #visoki:active~#sp3,
+        #visoki:active~#sp4,
+        #visoki:active~#sp5,
+        #visoki:active~#sp6 {
+            margin-top: 2em;
+            height: 2em;
+        }
+        
+        #duboki:active~#te1,
+        #duboki:active~#te2,
+        #duboki:active~#te3,
+        #duboki:active~#te4,
+        #duboki:active~#te5,
+        #duboki:active~#te6 {
+            margin-top: 2em;
+            height: 2em;
+        }
+        
+        #sp1,
+        #sp2,
+        #sp3,
+        #sp4,
+        #sp5,
+        #te1,
+        #te2,
+        #te3,
+        #te4 {
+            background-color: gray;
+            height: 4em;
+            width: calc(100%/9);
+            display: inline-block;
+            float: left;
+            margin: 0px;
+            padding: 0.3em;
+            box-sizing: border-box;
+            font-family: 'JetBrains Mono', monospace;
+            text-align: center;
+            transition: .2s;
+            color: white;
+        }
+        /**************/
+        
+        #h_vis,
+        #h_dub,
+        #h_ofs {
+            width: 100%;
+            font-size: 2em;
+            margin: 0px;
+            padding: 0px;
+            display: none;
+            height: 2em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        #prazno_holder {
+            height: 2em;
+            font-size: 2em;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+            color: rgb(58, 58, 58);
+        }
+        /******************************************/
+        
+        .text_visoki:first-letter,
+        .text_duboki:first-letter,
+        .text_ofsetni:first-letter {
+            float: left;
+            font-size: 2.5em;
+            padding-right: .1em;
+            font-family: 'JetBrains Mono', monospace;
+            line-height: .9;
+        }
+        
+        .text_visoki,
+        .text_duboki,
+        .text_ofsetni {
+            display: block;
+            column-count: 2;
+            column-gap: 2em;
+            padding-top: 1.5em;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            display: none;
+        }
+        /*******************/
+        
+        @keyframes animacija-tekst {
+            from {
+                opacity: 0;
+                transform: translateX(-0.5em);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0em);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="okvir2">
+        <div id="visoki">Visoki tisak</div>
+        <div id="duboki">Duboki tisak</div>
+        <div id="ofsetni">Ofestni tisak</div>
+        <div id="prazno_holder">Tiskovne forme</div>
+        <h5 id="h_vis">Tiskovna forma za visoki tisak</h5>
+        <h5 id="h_dub">Tiskovna forma za duboki tisak</h5>
+        <h5 id="h_ofs">Tiskovna forma za ofsetni tisak</h5>
+        <div id="sp1">SP</div>
+        <div id="te1">TE</div>
+        <div id="sp2">SP</div>
+        <div id="te2">TE</div>
+        <div id="sp3">SP</div>
+        <div id="te3">TE</div>
+        <div id="sp4">SP</div>
+        <div id="te4">TE</div>
+        <div id="sp5">TE</div>
+
+        <div class="text text_visoki">Tiskovni elementi su izbočeni u istoj ravnini, a slobodne površine su udubljene. Forma se izrađuje od cinka, magnezija, čelika (kemijsko otapanje ili elektrokemijsko otapanje – jetkanje ili mehaničko graviranje) ili od organskih materijala fotopolimera
+            (osvjetljavanje i razvijanje). Tehnika tiska je direktna stoga su forme stranično neispravne. Daju jednotonske otiske.
+        </div>
+
+        <div class="text text_duboki">Tiskovni elementi su udubljeni, a slobodne površine izbočene i uvijek u istoj ravnini. Tiskovni elementi su čašice u koje ulazi boja, a mogu biti različite površine i na različitoj dubini što daje podjelu na autotipijsku (različite površine, ista
+            dubina), konvencionalnu (ista veličina površina, različite dubine), kombiniranu i elektrogravirnu (dubina ovisi o veličini površine). S obzirom na to da čašice mogu primiti različitu količinu boje, sve tiskovne forme za duboki tisak, osim
+            autotipijske, daju višetonske otiske. Forme su stranično neispravne (direktna tehnika tiska)
+
+        </div>
+
+        <div class="text text_ofsetni">Tiskovni elementi i slobodne površine se ne razlikuju po geometrijskom položaju već po kemijskim svojstvima. Tiskovni elementi su oleofilni (hidrofobni) i upijaju boju na osnovi ulja, a slobodne površine su oleofobne (hidrofilne) i upijaju vodu.
+            Iz tih razloga dolazi do selektivnog kvašenja kada na formu djeluju različitih svojstava koje se ne miješaju. U tisku se na formu najprije nanosi otopina za vlaženje. Ofsetni plošni tisak indirektna je tehnika tiska stoga su forme stranično
+            isprave. Nanos boje je jednak što rezultira jednotonskim otiscima. Forma može biti izrađena od jednog metala - aluminijevog oksida (Al2O3) koji ima hidrofilna svojstva čime gradi slobodne površine, a tiskovni elementi ostatci su fotoosjetljivog
+            kopirnog sloja. Može biti i polimetalna – tiskovni elementi i slobodne površine izrađeni su od različitih materijala s obzirom na njihova hidrofilna odnosno oleofilna svojstva.
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
